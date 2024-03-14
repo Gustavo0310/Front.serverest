@@ -1,0 +1,16 @@
+================================================================================================== 
+DATA: 12/03/2024 01:30:12 
+NOME DO MÉTODO: RealizarLoginComDadosValidosDeveRetornarSucesso 
+AZURE TEST CASE: Realizar login com dados válidos DEVE retornar sucesso 
+RESULTADO: Failed 
+TEMPO TOTAL DE EXECUÇÃO: 3,53 segundos
+================================================================================================== 
+                          STACK TRACE 
+================================================================================================== 
+  Expected string length 27 but was 43. Strings differ at index 5.
+  Expected: "Login realizado com sucesso"
+  But was:  "Login\r\nEntrar\r\nNão é cadastrado?Cadastre-se"
+  ----------------^
+ 
+================================================================================================== 
+

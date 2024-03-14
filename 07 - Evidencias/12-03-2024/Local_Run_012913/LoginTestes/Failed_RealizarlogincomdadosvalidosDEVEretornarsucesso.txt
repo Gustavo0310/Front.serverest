@@ -1,0 +1,16 @@
+================================================================================================== 
+DATA: 12/03/2024 01:29:20 
+NOME DO MÉTODO: RealizarLoginComDadosValidosDeveRetornarSucesso 
+AZURE TEST CASE: Realizar login com dados válidos DEVE retornar sucesso 
+RESULTADO: Failed 
+TEMPO TOTAL DE EXECUÇÃO: 3,48 segundos
+================================================================================================== 
+                          STACK TRACE 
+================================================================================================== 
+  Expected string length 41 but was 43. Strings differ at index 0.
+  Expected: "navbar navbar-expand-lg background-navbar"
+  But was:  "Login\r\nEntrar\r\nNão é cadastrado?Cadastre-se"
+  -----------^
+ 
+================================================================================================== 
+

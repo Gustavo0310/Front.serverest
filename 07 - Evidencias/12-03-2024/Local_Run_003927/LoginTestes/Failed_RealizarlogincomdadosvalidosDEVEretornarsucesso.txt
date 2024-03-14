@@ -1,0 +1,14 @@
+================================================================================================== 
+DATA: 12/03/2024 00:39:45 
+NOME DO MÉTODO: RealizarLoginComDadosValidosDeveRetornarSucesso 
+AZURE TEST CASE: Realizar login com dados válidos DEVE retornar sucesso 
+RESULTADO: Failed:Error 
+TEMPO TOTAL DE EXECUÇÃO: 13,70 segundos
+================================================================================================== 
+                          STACK TRACE 
+================================================================================================== 
+OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds
+  ----> OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="root"]/section/aside/div/div[2]/div[1]/div/span"}
+  (Session info: chrome=122.0.6261.112) 
+================================================================================================== 
+

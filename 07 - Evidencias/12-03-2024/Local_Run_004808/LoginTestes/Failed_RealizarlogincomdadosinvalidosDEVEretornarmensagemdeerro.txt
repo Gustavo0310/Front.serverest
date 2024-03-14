@@ -1,0 +1,16 @@
+================================================================================================== 
+DATA: 12/03/2024 00:48:16 
+NOME DO MÉTODO: RealizarLoginComDadosInvalidosDeveRetornarMensagemDeErro 
+AZURE TEST CASE: Realizar login com dados inválidos DEVE retornar mensagem de erro 
+RESULTADO: Failed 
+TEMPO TOTAL DE EXECUÇÃO: 4,55 segundos
+================================================================================================== 
+                          STACK TRACE 
+================================================================================================== 
+  Expected string length 25 but was 26. Strings differ at index 0.
+  Expected: "email/password inválidos."
+  But was:  "Email e/ou senha inválidos"
+  -----------^
+ 
+================================================================================================== 
+
