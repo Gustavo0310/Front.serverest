@@ -21,7 +21,7 @@ namespace TestesAlternativos._03___Testes.Autenticação
             loginPage.AcessarPaginaDeAutenticacao();
 
             //Act - Ação do teste
-            loginPage.InserirCredenciais("gustavolmg2@gmail.com", "88687291");
+            loginPage.InserirCredenciais("testelogin@gmail.com", "12345");
             loginPage.PressionarBotaoEntrar();
 
             //Assert - Validação
@@ -58,7 +58,7 @@ namespace TestesAlternativos._03___Testes.Autenticação
 
             //Act - Ação do teste
             loginPage.PressionarBotaoCadastreSe();
-            loginPage.InserirCredenciaisDeCadastroDoUsuario("Gustavo", "gustavolacerda@gmail.com", "12345");
+            loginPage.InserirCredenciaisDeCadastroDoUsuario("Teste", "testelogin@gmail.com", "12345");
             loginPage.PressionarBotaoCadastrar();
 
         }

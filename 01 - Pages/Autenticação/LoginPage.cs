@@ -12,7 +12,7 @@ namespace TestesAlternativos._01___Pages.Autenticação
         public void RealizarLoginComSucesso()
         {
             AcessarPaginaDeAutenticacao();
-            InserirCredenciais("gustavolmg2@gmail.com", "88687291");
+            InserirCredenciais("testelogin@gmail.com", "12345");
             PressionarBotaoEntrar();
             RetornarMensagemLoginComSucesso();
         }
