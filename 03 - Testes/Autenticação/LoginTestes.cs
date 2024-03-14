@@ -39,7 +39,7 @@ namespace TestesAlternativos._03___Testes.Autenticação
             loginPage.AcessarPaginaDeAutenticacao();
 
             //Act
-            loginPage.InserirCredenciais("usuario@Errado.com", "123456");
+            loginPage.InserirCredenciais("usuario@Errado.com", "1234567");
             loginPage.PressionarBotaoEntrar();
 
             //Assert
