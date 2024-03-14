@@ -1,0 +1,14 @@
+================================================================================================== 
+DATA: 14/03/2024 10:30:46 
+NOME DO MÉTODO: LoginSemValorNoCampoEmailNaoDeveSerPossivel 
+AZURE TEST CASE: Login sem valor no campo Email não DEVE ser possível. 
+RESULTADO: Failed:Error 
+TEMPO TOTAL DE EXECUÇÃO: 12,61 segundos
+================================================================================================== 
+                          STACK TRACE 
+================================================================================================== 
+OpenQA.Selenium.WebDriverTimeoutException : Timed out after 10 seconds
+  ----> OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="root"]/div/div/form/div[5]/button"}
+  (Session info: chrome=122.0.6261.129) 
+================================================================================================== 
+

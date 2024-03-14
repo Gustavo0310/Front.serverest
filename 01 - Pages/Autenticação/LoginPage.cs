@@ -69,5 +69,14 @@ namespace TestesAlternativos._01___Pages.Autenticação
         {
             return BuscarTextoDoElemento_PorXpath("//*[@id=\"root\"]/div/div/form/div[1]/span");
         }
+
+        public string RetornarMensagemDeEmailObrigatorio()
+        {
+            return BuscarTextoDoElemento_PorXpath("//*[@id=\"root\"]/div/div/form/div[1]/span");
+        }
+        public string RetornarMensagemSenhaObrigatoria()
+        {
+            return BuscarTextoDoElemento_PorXpath("//*[@id=\"root\"]/div/div/form/div[1]/span");
+        }
     }
 }

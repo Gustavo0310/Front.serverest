@@ -1,0 +1,16 @@
+================================================================================================== 
+DATA: 14/03/2024 10:29:58 
+NOME DO MÉTODO: LoginSemValorNoCampoEmailNaoDeveSerPossivel 
+AZURE TEST CASE: Login sem valor no campo Email não DEVE ser possível. 
+RESULTADO: Failed 
+TEMPO TOTAL DE EXECUÇÃO: 3,64 segundos
+================================================================================================== 
+                          STACK TRACE 
+================================================================================================== 
+  Expected string length 19 but was 18. Strings differ at index 0.
+  Expected: "Email é obrigatório"
+  But was:  "Nome é obrigatório"
+  -----------^
+ 
+================================================================================================== 
+

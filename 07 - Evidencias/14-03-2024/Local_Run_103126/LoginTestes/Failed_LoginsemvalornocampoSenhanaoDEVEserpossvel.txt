@@ -1,0 +1,16 @@
+================================================================================================== 
+DATA: 14/03/2024 10:31:31 
+NOME DO MÉTODO: LoginSemValorNoCampoSenhaNaoDeveSerPossivel 
+AZURE TEST CASE: Login sem valor no campo Senha não DEVE ser possível. 
+RESULTADO: Failed 
+TEMPO TOTAL DE EXECUÇÃO: 3,07 segundos
+================================================================================================== 
+                          STACK TRACE 
+================================================================================================== 
+  Expected string length 33 but was 22. Strings differ at index 9.
+  Expected: "Password não pode ficar em branco"
+  But was:  "Password é obrigatório"
+  --------------------^
+ 
+================================================================================================== 
+

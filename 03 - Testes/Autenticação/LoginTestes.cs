@@ -81,5 +81,41 @@ namespace TestesAlternativos._03___Testes.Autenticação
             Assert.That(mensagem, Is.EqualTo("Este email já está sendo usado"));
             Thread.Sleep(3000);
         }
+
+
+
+        [TestCase(TestName = "Login sem valor no campo Email não DEVE ser possível.")]
+        public void LoginSemValorNoCampoEmailNaoDeveSerPossivel()
+        {
+            //Arrange - Pré requisito
+            loginPage.AcessarPaginaDeAutenticacao();
+
+            //Act - Ação do teste
+            loginPage.InserirCredenciais("", "12345");
+            loginPage.PressionarBotaoEntrar();
+
+            //Assert
+            string mensagem = loginPage.RetornarMensagemDeEmailObrigatorio();
+            Assert.That(mensagem, Is.EqualTo("Email é obrigatório"));
+            Thread.Sleep(3000);
+        }
+
+
+
+        [TestCase(TestName = "Login sem valor no campo Senha não DEVE ser possível.")]
+        public void LoginSemValorNoCampoSenhaNaoDeveSerPossivel()
+        {
+            //Arrange - Pré requisito
+            loginPage.AcessarPaginaDeAutenticacao();
+
+            //Act - Ação do teste
+            loginPage.InserirCredenciais("testelogin@gmail.com", "");
+            loginPage.PressionarBotaoEntrar();
+
+            //Assert
+            string mensagem = loginPage.RetornarMensagemSenhaObrigatoria();
+            Assert.That(mensagem, Is.EqualTo("Password é obrigatório"));
+            Thread.Sleep(3000);
+        }
     }
 }
