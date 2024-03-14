@@ -60,7 +60,26 @@ namespace TestesAlternativos._03___Testes.Autenticação
             loginPage.PressionarBotaoCadastreSe();
             loginPage.InserirCredenciaisDeCadastroDoUsuario("Teste", "testelogin@gmail.com", "12345");
             loginPage.PressionarBotaoCadastrar();
+            Thread.Sleep(5000);
+        }
 
+
+
+        [TestCase(TestName = "Mensagem que ja existe um cadastro")]
+        public void MensagemQueJaExiteUmCadastro()
+        {
+            //Arrange - Pré requisito
+            loginPage.AcessarPaginaDeAutenticacao();
+
+            //Act - Ação do teste
+            loginPage.PressionarBotaoCadastreSe();
+            loginPage.InserirCredenciaisDeCadastroDoUsuario("Teste", "testelogin@gmail.com", "12345");
+            loginPage.PressionarBotaoCadastrar();
+
+            //Assert
+            string mensagem = loginPage.RetornarMensagemQueJaExisteUmCadastro();
+            Assert.That(mensagem, Is.EqualTo("Este email já está sendo usado"));
+            Thread.Sleep(3000);
         }
     }
 }

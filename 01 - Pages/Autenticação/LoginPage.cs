@@ -39,6 +39,10 @@ namespace TestesAlternativos._01___Pages.Autenticação
             RealizarClique_PorXpath("//*[@id=\"root\"]/div/div/form/div[5]/button");
         }
 
+        public string RetornarMensagemQueJaExisteUmCadastro()
+        {
+            return BuscarTextoDoElemento_PorXpath("//*[@id=\"root\"]/div/div/form/div[1]/span");
+        }
 
         public void AcessarPaginaDeAutenticacao()
         {
