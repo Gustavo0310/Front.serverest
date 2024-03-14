@@ -47,5 +47,20 @@ namespace TestesAlternativos._03___Testes.Autenticação
             Assert.That(mensagem, Is.EqualTo("Email e/ou senha inválidos"));
             Thread.Sleep(1000);
         }
+
+
+
+        [TestCase(TestName = "Cadastrar Usuário para acesso ao sistema")]
+        public void CadastrarUsuarioParaAcessoAoSistema()
+        {
+            //Arrange - Pré requisito
+            loginPage.AcessarPaginaDeAutenticacao();
+
+            //Act - Ação do teste
+            loginPage.PressionarBotaoCadastreSe();
+            loginPage.InserirCredenciaisDeCadastroDoUsuario("Gustavo", "gustavolacerda@gmail.com", "12345");
+            loginPage.PressionarBotaoCadastrar();
+
+        }
     }
 }
