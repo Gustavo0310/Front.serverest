@@ -10,4 +10,4 @@
 
 5: Selecionar um teste no gerenciador, e dar um botão direito.
 
-6: E executar.
+6: Executar/Run.
