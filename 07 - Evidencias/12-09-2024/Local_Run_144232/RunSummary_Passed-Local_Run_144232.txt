@@ -1,0 +1,6 @@
+Passed | Cadastrar Usuário para acesso ao sistema
+Passed | Login sem valor no campo Email não DEVE ser possível.
+Passed | Login sem valor no campo Senha não DEVE ser possível.
+Passed | Realizar login com dados inválidos não DEVE ser possível
+Passed | Realizar login com dados válidos DEVE ser possível
+Passed | Validação de repetição de cadastro com Nome, E-mail e Senha já existente

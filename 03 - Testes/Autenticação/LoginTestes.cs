@@ -14,35 +14,35 @@ namespace FrontServerest._03___Testes.Autenticação
     {
         LoginPage loginPage = new LoginPage();
 
-        [TestCase(TestName = "Realizar login com dados válidos DEVE retornar sucesso")]
-        public void RealizarLoginComDadosValidosDeveRetornarSucesso()
+        [TestCase(TestName = "Realizar login com dados válidos DEVE ser possível")]
+        public void RealizarLoginComDadosValidosDeveSerPossivel()
         {
             //Arrange - Pré requisito
             loginPage.AcessarPaginaDeAutenticacao();
 
             //Act - Ação do teste
-            loginPage.InserirCredenciais("testelogin@gmail.com", "12345");
+            loginPage.InserirCredenciais("teste@gmail.com", "12345");
             loginPage.PressionarBotaoEntrar();
 
             //Assert - Validação
             string nomeDoUsuario = loginPage.RetornarMensagemLoginComSucesso();
             Assert.That(nomeDoUsuario, Is.EqualTo("Login\r\nEntrar\r\nNão é cadastrado?Cadastre-se"));
-            Thread.Sleep(800);
+            Thread.Sleep(3000);
         }
 
 
 
-        [TestCase(TestName = "Realizar login com dados inválidos DEVE retornar mensagem de erro")]
-        public void RealizarLoginComDadosInvalidosDeveRetornarMensagemDeErro()
+        [TestCase(TestName = "Realizar login com dados inválidos não DEVE ser possível")]
+        public void RealizarLoginComDadosInvalidosNaoDeveSerPoddivel()
         {
-            //Arrange
+            //Arrange - Pré requisito
             loginPage.AcessarPaginaDeAutenticacao();
 
-            //Act
+            //Act - Ação do teste
             loginPage.InserirCredenciais("usuario@Errado.com", "1234567");
             loginPage.PressionarBotaoEntrar();
 
-            //Assert
+            //Assert - Validação
             string mensagem = loginPage.RetornarMensagemDeUsuarioOuSenhaIncorreta();
             Assert.That(mensagem, Is.EqualTo("Email e/ou senha inválidos"));
             Thread.Sleep(1000);
@@ -58,28 +58,30 @@ namespace FrontServerest._03___Testes.Autenticação
 
             //Act - Ação do teste
             loginPage.PressionarBotaoCadastreSe();
-            loginPage.InserirCredenciaisDeCadastroDoUsuario("Teste", "testelogin@gmail.com", "12345");
+            loginPage.InserirCredenciaisDeCadastroDoUsuario("Teste", "teste@gmail.com", "12345");
+
+            //Assert - Validação
             loginPage.PressionarBotaoCadastrar();
             Thread.Sleep(5000);
         }
 
 
 
-        [TestCase(TestName = "Mensagem que ja existe um cadastro")]
-        public void MensagemQueJaExiteUmCadastro()
+        [TestCase(TestName = "Validação de repetição de cadastro com Nome, E-mail e Senha já existente")]
+        public void ValidacaoDeRepeticaoDeCadastroComNomeEmailEsenhaJaExistente()
         {
             //Arrange - Pré requisito
             loginPage.AcessarPaginaDeAutenticacao();
 
             //Act - Ação do teste
             loginPage.PressionarBotaoCadastreSe();
-            loginPage.InserirCredenciaisDeCadastroDoUsuario("Teste", "testelogin@gmail.com", "12345");
+            loginPage.InserirCredenciaisDeCadastroDoUsuario("Teste", "teste@gmail.com", "12345");
             loginPage.PressionarBotaoCadastrar();
 
-            //Assert
+            //Assert - Validação
             string mensagem = loginPage.RetornarMensagemQueJaExisteUmCadastro();
             Assert.That(mensagem, Is.EqualTo("Este email já está sendo usado"));
-            Thread.Sleep(3000);
+            Thread.Sleep(1000);
         }
 
 
@@ -94,7 +96,7 @@ namespace FrontServerest._03___Testes.Autenticação
             loginPage.InserirCredenciais("", "12345");
             loginPage.PressionarBotaoEntrar();
 
-            //Assert
+            //Assert - Validação
             string mensagem = loginPage.RetornarMensagemDeEmailObrigatorio();
             Assert.That(mensagem, Is.EqualTo("Email é obrigatório"));
             Thread.Sleep(3000);
@@ -109,10 +111,10 @@ namespace FrontServerest._03___Testes.Autenticação
             loginPage.AcessarPaginaDeAutenticacao();
 
             //Act - Ação do teste
-            loginPage.InserirCredenciais("testelogin@gmail.com", "");
+            loginPage.InserirCredenciais("teste@gmail.com", "");
             loginPage.PressionarBotaoEntrar();
 
-            //Assert
+            //Assert - Validação
             string mensagem = loginPage.RetornarMensagemSenhaObrigatoria();
             Assert.That(mensagem, Is.EqualTo("Password é obrigatório"));
             Thread.Sleep(3000);
