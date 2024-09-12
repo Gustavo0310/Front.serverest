@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestesAlternativos._04___Utilidades;
+using FrontServerest._04___Utilidades;
 
-namespace TestesAlternativos._01___Pages.Autenticação
+namespace FrontServerest._01___Pages.Autenticação
 {
     public class LoginPage : Driver
     {
@@ -17,10 +17,6 @@ namespace TestesAlternativos._01___Pages.Autenticação
             RetornarMensagemLoginComSucesso();
         }
 
-        public float soma()
-        {
-            return 1 + 1.5f;
-        }
 
         public void PressionarBotaoCadastreSe()
         {

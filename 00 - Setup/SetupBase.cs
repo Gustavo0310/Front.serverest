@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestesAlternativos._00___Setup
+namespace FrontServerest._00___Setup
 {
     [SetUpFixture]
     public class SetupBase : SetupConfig

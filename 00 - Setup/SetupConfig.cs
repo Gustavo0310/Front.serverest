@@ -7,9 +7,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestesAlternativos._06___ReportManagement;
+using FrontServerest._06___ReportManagement;
 
-namespace TestesAlternativos._00___Setup
+namespace FrontServerest._00___Setup
 {
     public class SetupConfig
     {

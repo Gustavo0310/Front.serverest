@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestesAlternativos._06___ReportManagement
+namespace FrontServerest._06___ReportManagement
 {
     public class Report : ReportService
     {

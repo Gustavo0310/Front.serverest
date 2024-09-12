@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using TestesAlternativos._00___Setup;
+using FrontServerest._00___Setup;
 
-namespace TestesAlternativos._06___ReportManagement
+namespace FrontServerest._06___ReportManagement
 {
     public class ReportService
     {

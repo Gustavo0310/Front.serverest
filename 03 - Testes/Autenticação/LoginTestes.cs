@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TestesAlternativos._00___Setup;
-using TestesAlternativos._01___Pages.Autenticação;
+using FrontServerest._00___Setup;
+using FrontServerest._01___Pages.Autenticação;
 
-namespace TestesAlternativos._03___Testes.Autenticação
+namespace FrontServerest._03___Testes.Autenticação
 {
     [TestFixture(Category = "Autenticação - Login")]
     public class LoginTestes : SetupBase
