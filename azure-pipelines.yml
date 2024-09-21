@@ -1,0 +1,30 @@
+trigger:
+- main
+ 
+pool:
+  vmImage: 'windows-latest'
+ 
+variables:
+  buildConfiguration: 'Release'
+ 
+steps:
+- task: UseDotNet@2
+  inputs:
+    version: '7.0.x'
+    packageType: 'sdk'
+ 
+- script: dotnet restore
+  displayName: 'dotnet restore'
+ 
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build'
+ 
+- script: dotnet test --configuration $(buildConfiguration) --logger "trx;LogFileName=test_results.xml"
+  displayName: 'dotnet test'
+ 
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testResultsFormat: 'VSTest'
+    testResultsFiles: '**/*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
