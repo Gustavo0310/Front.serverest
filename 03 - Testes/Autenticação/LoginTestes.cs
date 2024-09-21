@@ -45,7 +45,7 @@ namespace FrontServerest._03___Testes.Autenticação
             //Assert - Validação
             string mensagem = loginPage.RetornarMensagemDeUsuarioOuSenhaIncorreta();
             Assert.That(mensagem, Is.EqualTo("Email e/ou senha inválidos"));
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
         }
 
 
