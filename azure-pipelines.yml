@@ -27,4 +27,4 @@ steps:
   inputs:
     testResultsFormat: 'VSTest'
     testResultsFiles: '**/*.xml'
-    searchFolder: '$(System.DefaultWorkingDirectory)'
+    searchFolder: '$(System.DefaultWorkingDirectory)' 
